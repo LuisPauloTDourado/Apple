@@ -81,15 +81,20 @@ img {
 
 /* From Uiverse.io by alexruix */ 
 .card1 {
-    width: 190px;
-    height: 254px;
-    padding: 6em 3em 8em 3em;
-    background: #f5f5f5;
-    position: relative;
-    overflow: visible;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-   }
-   
+    width: 30%; /* Ajuste conforme necessário */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px; /* Espaçamento entre os cartões */
+}
    .card-img {
     background-color: #ffffff;
     height: 40%;
@@ -97,6 +102,13 @@ img {
     border-radius: .5rem;
     transition: .3s ease;
    }
+
+   .card-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px; /* Espaçamento entre os cartões */
+}
    
    .card-info {
     padding-top: 10%;
@@ -156,4 +168,131 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+}  
+
+@media (max-width: 1024px) {
+    .titulo {
+        margin: 0 20px 0 0; /* Ajusta a margem para telas menores */
+    }
+
+    .card1 {
+        width: 45%; /* Ajusta a largura dos cartões para telas médias */
+    }
 }
+
+/* Para dispositivos com largura de até 768px */
+@media (max-width: 768px) {
+    .titulo {
+        margin: 0 10px 0 0; /* Ajusta a margem para telas menores */
+        font-size: 1.5em; /* Reduz o tamanho do título */
+    }
+
+    .card1 {
+        width: 100%; /* Ajusta a largura dos cartões para telas pequenas */
+    }
+
+    .link {
+        display: block; /* Alinha os links em bloco em vez de linha */
+        margin: 10px 0; /* Ajusta as margens */
+    }
+
+    .navegar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Para dispositivos com largura de até 480px */
+@media (max-width: 480px) {
+    .logo {
+        height: 50px;
+        width: 50px; /* Ajusta o tamanho do logo para telas menores */
+    }
+
+    .titulo {
+        font-size: 1.2em; /* Reduz o tamanho do título para telas menores */
+    }
+
+    .card1 {
+        width: 100%;
+        margin-bottom: 20px; /* Adiciona um espaçamento inferior entre os cartões */
+    }
+
+    .card-img {
+        height: auto; /* Ajusta a altura da imagem para se adaptar melhor */
+    }
+
+    footer {
+        padding: 10px; /* Ajusta o padding do rodapé */
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplica a animação aos cartões */
+.card1 {
+    animation: fadeInUp 0.6s ease-out; /* Adiciona a animação aos cartões */
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out; /* Adiciona a animação aos cartões */
+}
+
+/* From Uiverse.io by iZOXVL */ 
+
+  
+  .boton-elegante::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    transform: scale(0);
+    transition: transform 0.5s ease;
+  }
+  
+  
+  
+
+
+  .card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Opcional, para bordas arredondadas na imagem */
+}
+
+.boton-elegante {
+    display: inline-block;
+    background-color: #505050;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px; /* Espaço entre a imagem e o botão */
+    transition: background-color 0.3s ease;
+}
+
+
+.boton-elegante:hover {
+    background-color: #272727; /* Cor do botão quando em hover */
+}
+
